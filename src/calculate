@@ -1,0 +1,41 @@
+import java.util.Arrays;
+
+/**
+ * Обчислення
+ * 
+ * @author anna_taranenko
+ *
+ */
+public class Calculate {
+	/**
+	 * 
+	 * Знаходження максимальних чисел в кожному рядку
+	 * 
+	 * @param N рядки
+	 * @param M стовпці
+	 * @return
+	 */
+	public static int[] Calculate(int N, int M) {
+
+		int[][] array = new int[N][M];
+		int[] max = new int[N];
+		int flag = 0;
+
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				array[i][j] = (int) (Math.random() * 100);
+				if (array[i][j] > flag) {
+					flag = array[i][j];
+				}
+			}
+			max[i] = flag;
+			flag = 0;
+		}
+
+		for (int[] row : array) {
+			System.out.println(Arrays.toString(row));
+		}
+
+		return max;
+	}
+}
