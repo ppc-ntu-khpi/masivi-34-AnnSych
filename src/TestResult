@@ -1,0 +1,20 @@
+import java.util.Arrays;
+
+/**
+ * Головний клас
+ * 
+ * @author anna_taranenko
+ *
+ */
+public class TestResult {
+	/**
+	 * Mетод main
+	 * 
+	 * @param
+	 */
+	public static void main(String[] args) {
+		int N = 6, M = 6;
+
+		System.out.println("Список найбійльших елементів кожного рядка: " + Arrays.toString(Calculate.Calculate(N, M)));
+	}
+}
